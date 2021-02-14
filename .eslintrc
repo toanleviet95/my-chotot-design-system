@@ -1,15 +1,7 @@
 {
   "root": true,
   "parser": "babel-eslint",
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:jsx-a11y/recommended",
-    "plugin:react-hooks/recommended",
-    "airbnb"
-  ],
+  "extends": ["airbnb", "prettier", "plugin:compat/recommended", "plugin:react-hooks/recommended"],
   "env": {
     "browser": true,
     "commonjs": true,
@@ -43,6 +35,7 @@
     "quotes": [1, "single"],
     "semi": 0,
     "jsx-quotes": [1, "prefer-single"],
-    "object-curly-newline": 0
+    "object-curly-newline": 0,
+    "import/no-extraneous-dependencies": 0
   }
 }

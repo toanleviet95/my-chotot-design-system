@@ -1,6 +1,6 @@
-# React sample code with Parcel
+# My Chotot Design System
 [![Build Status][build-badge]][build]
-### This is my React starter kit in some projects
+
 
 <div align="center">
   <img src="https://seeklogo.com/images/R/react-logo-7B3CE81517-seeklogo.com.png" width="10%" />
