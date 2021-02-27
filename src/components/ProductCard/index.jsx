@@ -10,9 +10,12 @@ const Container = styled.div`
   padding: 12px;
   border-right: 1px solid #f4f4f4;
   overflow: hidden;
-  padding: 0;
   background: #fff;
   width: 192px;
+  &:hover {
+    box-shadow: 0 1px 7px 0 rgb(0 0 0 / 30%);
+    z-index: 2;
+  }
 `
 
 const Wrapper = styled.div`
@@ -26,7 +29,7 @@ const LinkWrapper = styled.a`
   color: #222;
 `
 
-const ThumbnailWrapper = styled.a`
+const ThumbnailWrapper = styled.div`
   position: relative;
   display: flex;
   margin: -1px;
@@ -54,6 +57,7 @@ const Thumbnail = styled.div`
   border-radius: 2px;
   overflow: hidden;
   display: inline-block;
+  height: 169px;
 `
 
 const ImgNumber = styled.div`
@@ -70,7 +74,6 @@ const ImgNumber = styled.div`
   align-items: center;
   span {
     font-size: 11px;
-    line-height: 1.09;
   }
 `
 
@@ -126,7 +129,6 @@ const AdTitle = styled.div`
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: 0;
   font-weight: 400;
 `
 
@@ -159,10 +161,11 @@ const Price = styled.span`
 
 const Divider = styled.div`
   display: inline-block;
-  &:after {
+  line-height: 6px;
+  &::after {
     font-size: 14px;
     vertical-align: middle;
-    content: "\B7";
+    content: ".";
     display: inline-block;
   }
 `
@@ -193,7 +196,6 @@ const Location = styled.span`
   text-transform: capitalize;
   margin-top: 2px;
   span {
-    margin-right: 0;
     font-size: 11px;
     margin: 0 3px;
   }
@@ -209,17 +211,33 @@ const Icon = styled.img`
   border-style: none;
   object-fit: cover;
   margin-right: 2px;
+  width: 15px;
+`
+
+const BestPrice = styled.div`
+  background-color: rgb(255, 255, 255);
+  color: rgb(203, 32, 38);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 0 4px;
+  border-radius: 3px;
+  border: 1px solid rgb(203, 32, 38);
+  text-transform: uppercase;
+  height: 20px;
+  line-height: 20px;
+  position: relative;
+  display: inline-block;
 `
 
 const ProductCard = ({
-  title, adType, condition, price, time, location, src, href, alt, numImages, isHotCard,
+  title, adType, condition, price, time, location, src, href, alt, numImages, isHotCard, isBestPrice
 }) => (
   <Container>
     <Wrapper>
       <LinkWrapper href={href}>
         <ThumbnailWrapper>
           <Thumbnail>
-            <Image src={src} alt={alt} />
+            <Image src={src} alt={alt} loading='lazy' />
             <ImgNumber>
               <span>
                 {numImages}
@@ -244,6 +262,7 @@ const ProductCard = ({
           </ConditionWrapper>
           <div>
             <Price>{price}</Price>
+            {isBestPrice && <BestPrice>GIÁ TỐT</BestPrice>}
           </div>
         </Caption>
         <Footer>
@@ -280,12 +299,14 @@ ProductCard.propTypes = {
   alt: PropTypes.string,
   numImages: PropTypes.number,
   isHotCard: PropTypes.bool,
+  isBestPrice: PropTypes.bool,
 }
 
 ProductCard.defaultProps = {
   alt: '',
   numImages: 0,
   isHotCard: false,
+  isBestPrice: false,
 }
 
 export default ProductCard
