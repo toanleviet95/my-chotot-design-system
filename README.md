@@ -1,7 +1,6 @@
 # My Chotot Design System
 [![Build Status][build-badge]][build]
 
-
 <div align="center">
   <img src="https://seeklogo.com/images/R/react-logo-7B3CE81517-seeklogo.com.png" width="10%" />
   &nbsp;
@@ -15,6 +14,9 @@
   &nbsp;
   <img src="https://travis-ci.com/images/logos/TravisCI-Mascot-1.png" width="10%" />
 </div>
+
+### Link demo
+http://my-cho-tot.surge.sh/
 
 ### Tech Stack
 - [React][reactjs] - Library for building user interfaces
