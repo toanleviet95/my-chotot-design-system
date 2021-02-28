@@ -8,6 +8,10 @@ export default [
     icon: 'caret-down',
   },
   {
+    name: 'arrow-right',
+    icon: 'arrow-right',
+  },
+  {
     name: 'check',
     icon: 'check',
   },

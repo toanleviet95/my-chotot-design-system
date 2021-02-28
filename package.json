@@ -1,8 +1,26 @@
 {
   "name": "my-chotot-design-system",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "My Chotot Design System",
+  "title": "My Design System",
+  "keywords": [
+    "chotot",
+    "component",
+    "components",
+    "design",
+    "framework",
+    "frontend",
+    "react",
+    "react-component",
+    "ui"
+  ],
+  "homepage": "http://my-cho-tot.surge.sh",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toanleviet95/my-chotot-design-system"
+  },
   "main": "dist/index.js",
+  "unpkg": "dist/index.js",
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
@@ -78,5 +96,6 @@
     "hooks": {
       "pre-commit": "yarn lint-staged"
     }
-  }
+  },
+  "engines" : { "node" : ">=12.0" }
 }

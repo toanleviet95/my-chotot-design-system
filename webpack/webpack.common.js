@@ -10,7 +10,7 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           'babel-loader',
-          'eslint-loader',
+          // 'eslint-loader',
           {
             loader: '@linaria/webpack-loader',
             options: {

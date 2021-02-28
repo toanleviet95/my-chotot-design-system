@@ -77,6 +77,25 @@ function Icon({ type, width, height, color }) {
       );
       break;
     }
+    case 'arrow-right': {
+      component = (
+        <g fill='none' fillRule='evenodd'>
+          <path
+            stroke={color}
+            strokeLinecap='round'
+            strokeWidth='1.5'
+            d='M2.125 4L7.75 9l-5.625 5'
+          />
+          <path
+            stroke='#FFF'
+            strokeWidth='0.1'
+            d='M1 1h9v16H1z'
+            opacity='0.01'
+          />
+        </g>
+      );
+      break;
+    }
     default:
       component = null;
   }
