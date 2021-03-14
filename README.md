@@ -11,9 +11,7 @@
   &nbsp;
   <img src="https://seeklogo.com/images/S/stylelint-logo-631B4EAA36-seeklogo.com.png" width="10%" />
    &nbsp;
-  <img src="https://raw.githubusercontent.com/react-theming/storybook-addon-material-ui/master/docs/logos/Storybook.png" width="10%" />
-  &nbsp;
-  <img src="https://travis-ci.com/images/logos/TravisCI-Mascot-1.png" width="10%" />
+  <img src="https://raw.githubusercontent.com/react-theming/storybook-addon-material-ui/master/docs/logos/Storybook.png" width="8%" />
 </div>
 
 ### Link demo
@@ -26,7 +24,6 @@ http://my-cho-tot.surge.sh/
 - [ESlint][eslint] - The pluggable linting utility for JS and JSX
 - [Stylelint][stylelint] - Linter that helps you avoid errors and enforce conventions in your styles
 - [Storybook][storybook] - Tool for developing UI components
-- [TravisCI][travis-ci] - Test and deploy
 
 ## 📦 Install
 
@@ -41,12 +38,24 @@ yarn add my-chotot-design-system
 ## 🔨 Usage
 
 ```jsx
-import { Button, DatePicker } from 'my-chotot-design-system';
+import { ProductCard } from 'my-chotot-design-system';
 
 const App = () => (
   <>
-    <Button type="primary">PRESS ME</Button>
-    <DatePicker placeholder="select date" />
+    <ProductCard
+      adType="user"
+      alt="Sky Center Phổ Quang Tân Bình Cho Thuê 2PN FNT"
+      condition="75m - 2 PN"
+      href="https://nha.chotot.com/tp-ho-chi-minh/quan-tan-binh/thue-can-ho-chung-cu/79232897.htm"
+      isBestPrice
+      isHotCard
+      location="Hà Nội"
+      numImages={6}
+      price="12 triệu/tháng"
+      src="https://cdn.chotot.com/QIwA5B_B5fBk39Kpb_2tPCw8RcPFwUbncOMDtEK09t4/preset:listing/plain/00b502d729a6fc50efcd09cbf7d3f711-2692465108042704753.jpg"
+      time="7 phút trước"
+      title="Cho thuê phòng trọ mới xây"
+    />
   </>
 );
 ```
@@ -62,4 +71,3 @@ import 'my-chotot-design-system/dist/styles.css';
 [eslint]: https://eslint.org
 [stylelint]: https://stylelint.io
 [storybook]: https://storybook.js.org
-[travis-ci]: https://travis-ci.org

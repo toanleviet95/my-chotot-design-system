@@ -1,6 +1,6 @@
 {
   "name": "my-chotot-design-system",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "My Chotot Design System",
   "title": "My Design System",
   "keywords": [
@@ -35,7 +35,7 @@
     "prettier": "prettier --write ./src/*"
   },
   "author": "toanleviet95@gmail.com",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@linaria/react": "^3.0.0-beta.1",
     "flickity": "^2.2.2",

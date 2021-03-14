@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { styled } from '@linaria/react'
 import parse from 'html-react-parser'
 import PropTypes from 'prop-types'
-import Dropdown from './Dropwdown'
 
 const Container = styled.div`
   height: 92px;
@@ -60,6 +59,43 @@ const Image = styled.img`
   out-line: none;
   user-select: none;
 `
+
+
+const DropdownContainer = styled.div`
+  position: absolute;
+  top: 92px;
+  background-color: rgb(255, 255, 255);
+  width: calc(100% + 1px);
+  box-shadow: rgb(0 0 0 / 20%) 0px 10px 10px 0px;
+  z-index: 10;
+  a {
+    padding: 12px 16px;
+    border-top: 1px solid rgb(244, 244, 244);
+    font-size: 14px;
+    height: 45px;
+    text-decoration: none;
+    display: block;
+    &:hover {
+      background-color: rgb(244, 244, 244);
+    }
+  }
+`
+
+const Dropdown = ({ items }) => (
+  <DropdownContainer>
+    {
+      items.map(({ href, text }) => (
+        <a href={href}>
+          {text}
+        </a>
+      ))
+    }
+  </DropdownContainer>
+)
+
+Dropdown.propTypes = {
+  items: PropTypes.array.isRequired,
+}
 
 const CategorySelect = ({ icon, title, subText, href, items }) => {
   const [toggle, setToggle] = useState(false)
