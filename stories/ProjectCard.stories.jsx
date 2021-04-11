@@ -1,10 +1,15 @@
 import ProjectCard from '@/components/ProjectCard'
+import { styled } from '@linaria/react'
 
 export default {
   title: 'Components/Project Card',
 };
 
-const Template = (args) => <ProjectCard {...args} />
+const Container = styled.div`
+  width: 238px;
+`
+
+const Template = (args) => <Container><ProjectCard {...args} /></Container>
 
 export const Project = Template.bind({});
 Project.args = {

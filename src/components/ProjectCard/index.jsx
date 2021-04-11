@@ -6,7 +6,6 @@ const Container = styled.div`
   padding: 8px;
   overflow: hidden;
   background: #fff;
-  width: 238px;
 `
 
 const Wrapper = styled.div`
