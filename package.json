@@ -1,6 +1,6 @@
 {
   "name": "my-chotot-design-system",
-  "version": "1.0.8",
+  "version": "1.1.1",
   "description": "My Chotot Design System",
   "title": "My Design System",
   "keywords": [
@@ -87,6 +87,12 @@
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.1.14",
     "webpack-merge": "^4.2.1"
+  },
+  "peerDependencies": {
+    "linaria": "^3.0.0-beta.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   },
   "lint-staged": {
     "**/*.{js,jsx,tsx,ts,less,md,json}": "git add",

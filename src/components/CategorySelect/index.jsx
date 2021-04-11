@@ -22,7 +22,6 @@ const Link = styled.a`
   -webkit-box-align: center;
   align-items: center;
   text-decoration: none;
-  height: 100%;
   padding: 15px 0px;
   margin-right: -1px;
   display: flex;
@@ -56,10 +55,8 @@ const Image = styled.img`
   height: 60px;
   border-radius: 20px;
   flex-basis: 30%;
-  out-line: none;
   user-select: none;
 `
-
 
 const DropdownContainer = styled.div`
   position: absolute;
@@ -69,10 +66,10 @@ const DropdownContainer = styled.div`
   box-shadow: rgb(0 0 0 / 20%) 0px 10px 10px 0px;
   z-index: 10;
   a {
+    color: rgb(34, 34, 34);
     padding: 12px 16px;
     border-top: 1px solid rgb(244, 244, 244);
     font-size: 14px;
-    height: 45px;
     text-decoration: none;
     display: block;
     &:hover {
@@ -94,8 +91,13 @@ const Dropdown = ({ items }) => (
 )
 
 Dropdown.propTypes = {
-  items: PropTypes.array.isRequired,
+  items: PropTypes.array,
 }
+
+Dropdown.defaultProps = {
+  items: [],
+}
+
 
 const CategorySelect = ({ icon, title, subText, href, items }) => {
   const [toggle, setToggle] = useState(false)

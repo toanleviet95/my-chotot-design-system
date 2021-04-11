@@ -11,7 +11,6 @@ const Container = styled.div`
   border-right: 1px solid #f4f4f4;
   overflow: hidden;
   background: #fff;
-  width: 192px;
   &:hover {
     box-shadow: 0 1px 7px 0 rgb(0 0 0 / 30%);
     z-index: 2;
